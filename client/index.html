@@ -27,18 +27,19 @@
     <div id="main">
       <h1>chatterbox</h1>
       <!-- Your HTML goes here! -->
-      <form id="room">
-        <label for="roomPick">Room: </label>
-        <select id="roomSelect">
-          <option value="addRoom">Add Room: </option>
-          <option value="lobby" selected>Lobby</option>
-        </select>
-      </form>
-      <form id="send">
-        <input type="text" name="message">
-        <button class="submit">Submit</button>
+      <div id="rooms">Room: 
+        <select id="roomSelect"></select>
+      </div>
+      <form action="#" id="send" method="post">
+        <input type="text" name="message" id="message"/>
+        <input name="submit" class="submit" type="submit"/>
       </form>
     </div>
     <div id="chats"></div>
+    <script>
+      $(function() {
+        app.init();
+      })
+    </script>
   </body>
 </html>
